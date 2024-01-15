@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="Icon.png" type="image/x-icon">
+    <title>Jack Torcy</title>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="logo">
+            <img src="Icon.png" alt="Logo">
+        </div>
+        <nav>
+            <ul class="content">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mode_toggle">
+            Toggle
+        </div>
+    </div>
+
+    <div class="about" id="home">
+        <div class="text">
+            <h2>About</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, eius molestiae? Ducimus aliquid fuga
+                animi, harum provident veritatis enim error saepe, sit cumque eius inventore cum aliquam numquam quam!
+                Assumenda!</p>
+        </div>
+        <div class="cv">
+            <form action="CV.pdf" target="_blank">
+                <button type:"submit" class="container">
+                    <i class="fa-regular fa-file"></i>
+                    <h2>CV</h2>
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="skills" id="skills">
+        <div class="center">
+            <div class="center_bubble">
+                <h3>Skills</h3>
+            </div>
+        </div>
+        <div class="top_left">
+            <div class="html_bubble">
+                <h4>HTML</h4>
+            </div>
+        </div>
+        <div class="top">
+            <div class="css_bubble">
+                <h4>CSS</h4>
+            </div>
+        </div>
+        <div class="top_right">
+            <div class="js_bubble">
+                <h4>JS</h4>
+            </div>
+        </div>
+        <div class="left">
+            <div class="python_bubble">
+                <h4>Python</h4>
+            </div>
+        </div>
+        <div class="right">
+            <div class="sql_bubble">
+                <h4>SQL</h4>
+            </div>
+        </div>
+        <div class="bottom_left">
+            <div class="react_bubble">
+                <h4>React</h4>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bootstrap_bubble">
+                <h4>Bootstrap</h4>
+            </div>
+        </div>
+        <div class="bottom_right">
+            <div class="github_bubble">
+                <h4>Github</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="projects" id="projects">
+        <div class="card_container">
+            <div class="card" id="card1">
+                <div class="image">
+                    <img src="https://picsum.photos/seed/cab/200/300" alt="placeholder image">
+                </div>
+                <div class="text">
+                    <h2>Project 1</h2>
+                    <p>description of project</p>
+                </div>
+            </div>
+            <div class="card" id="card2">
+                <div class="image">
+                    <img src="https://picsum.photos/seed/pop/200/300" alt="">
+                </div>
+                <div class="text">
+                    <h2>Project 2</h2>
+                    <p>description of project</p>
+                </div>
+            </div>
+            <div class="card" id="card3">
+                <div class="image">
+                    <img src="https://picsum.photos/seed/hidsen/100/300" alt="">
+                </div>
+                <div class="text">
+                    <h2>Project 3</h2>
+                    <p>description of project</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact_section" id="contact">
+        <div class="form_container">
+            <!-- MAKE THANK YOU FOR CONTACTING PAGE AFTER SUBMIT -->
+            <!-- Or just a hidden text that appears when you click submit and says thanks for contacting -->
+            <!-- It can hide the form and just appear with a pop effect -->
+
+            <form action="">
+
+                <div class="first_row">
+                    <!-- First name and Last name are slighltly off in the positioning -->
+                    <!-- Last name is further along right on the input box than first name -->
+                    <div class="input_box" id="first_name">
+                        <label>First name</label>
+                        <input type="text" name="">
+                    </div>
+
+                    <div class="input_box" id="last_name">
+                        <label>Last name</label>
+                        <input type="text" name="">
+                    </div>
+                </div>
+                <!-- Needs working on, cant get email tab to work. -->
+                <div class="second_row">
+                    <div class="input_box" id="email">
+                        <label>Email</label>
+                        <input type="email" name="">
+                    </div>
+                </div>
+
+                <div class="input_box" id="reason">
+                    <label>Reason for contact</label>
+                    <input type="text" name="">
+                </div>
+
+            </form>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

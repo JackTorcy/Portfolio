@@ -1,0 +1,16 @@
+CV
+Skills you have
+-link to github and linked in
+-Languages
+-tools
+Projects
+-add cards to allow you to take you to the projects
+Get in touch
+Navbar can take you down to the same page or other pages, like you cick it and it will scroll down to the relevant part.
+Link to where you're based
+Form for contact me.
+[09:24] Zakirullah Pardis
+https://www.freecodecamp.org/news/javascript-projects-for-beginners/
+40 JavaScript Projects for Beginners – Easy Ideas to Get Started Coding JS
+
+https://www.freecodecamp.org/news/javascript-projects-for-beginners/ - beginner projects
