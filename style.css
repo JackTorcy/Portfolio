@@ -78,7 +78,7 @@ body {
     border: 2px black solid;
     overflow: hidden;
     /* background-image: url(Images/background2.jpg); */
-    background-color: hsla(149, 40%, 49%, 0.6);
+    background-color: hsla(159, 40%, 35%, 1);
 }
 
 .about .text {
@@ -212,7 +212,7 @@ body {
 .ball {
     position:absolute;
     border-radius:100%;
-    opacity: 60%;
+    opacity: 100%;
     z-index: -1;
     background-color: #A3BBAD;
 }
