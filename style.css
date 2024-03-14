@@ -3,9 +3,10 @@
 
 /* Colours light bg: #57bc90 Dark BG img colour:#0F1626  */
 
-html{
-    zoom:125%;
+html {
+    zoom: 125%;
 }
+
 * {
     font-family: 'Nunito', sans-serif;
     margin: 0;
@@ -17,9 +18,9 @@ body {
     background-image: url(Images/background.png);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background-attachment: fixed;
     color: white;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -58,7 +59,7 @@ body {
     color: white;
 }
 
-.mode_toggle {
+.navCV {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +83,7 @@ body {
     border: 0.25px black solid;
     overflow: hidden;
     /* background-image: url(Images/background2.jpg); */
-    background-color: hsla(159, 40%, 35%, 1);
+    background-color: #286d5d;
 }
 
 .about .text {
@@ -91,35 +92,6 @@ body {
 
 .about .text h2 {
     padding: 10px 0px;
-}
-
-.about .cv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    padding-top: 50px;
-
-}
-
-.about .cv form {
-    width: 25%;
-}
-
-.about .cv .container {
-    display: flex;
-    flex-wrap: wrap;
-    height: 50px;
-    width: 100%;
-    /* background-color: hsla(135, 90%, 40%, 0.6); */
-    background-color: #49f19ace;
-    border-radius: 5px;
-    border: 1px black solid;
-    justify-content: center;
-    padding: 2px;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
 }
 
 .about .aboutHeading {
@@ -150,18 +122,49 @@ body {
     align-self: center;
     justify-self: center;
     display: flex;
+    margin: 10px;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    border: 2px solid black;
-    height: 90%;
-    width: 90%;
-    background-color: #A3BBAD;
+    font-size: 90px;
+    color: #286d5d;
+    height: 85%;
+    width: 85%;
+    background-color: rgba(10, 55, 65, 1);
+    transition: 0.5s all ease;
+}
+
+.gridItem:hover {
+    color: white;
+    background-color: #286d5d;
+    height: 95%;
+    width: 95%;
+    margin: 0px;
+    transition: 0.5s all ease;
+    align-items: start;
+    font-size: 50px;
+    padding-top: 10px;
+}
+.skillTxt > h6{
+    font-size:15px;
+    display:none;
+}
+.gridItem:hover > .skillTxt > h6{
+    display:block;
+    transition: 0.5s all ease;
+}
+.skillTxt > p{
+    font-size: 12px;
+    display:none;
+}
+.gridItem:hover > .skillTxt > p{
+    display:block;
+    transition: 0.5s all ease;
 }
 
 #htmlBubble,
 #pythonBubble,
-#mongoBubble {
+#flaskBubble {
     justify-self: end;
 }
 
@@ -185,9 +188,11 @@ body {
 }
 
 .projects .card_container .card {
+    text-decoration: none;
+    color: white;
     display: grid;
     grid-template-rows: 60% 40%;
-    background-color: #A3BBAD;
+    background-color: #286d5d;
     width: 25%;
     height: 400px;
     border-radius: 20px;
@@ -214,10 +219,10 @@ body {
 }
 
 .ball {
-    position:absolute;
-    border-radius:100%;
+    position: absolute;
+    border-radius: 100%;
     opacity: 100%;
     z-index: -1;
     background-color: #8094c261;
-    margin:0px;
+    margin: 0px;
 }
