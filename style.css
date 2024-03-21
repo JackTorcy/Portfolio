@@ -25,6 +25,7 @@ body {
 
 /* NAVBAR */
 .banner {
+    z-index: 2;
     position: sticky;
     top: 0px;
     display: flex;
@@ -68,6 +69,7 @@ body {
 
 /* About */
 #aboutSection {
+    margin-top: 100px;
     height: 400px;
     display: flex;
     align-items: center;
@@ -102,9 +104,28 @@ body {
 }
 
 /* Skills */
+#skillsHeader {
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#skillsTitle {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    width: 0%;
+    opacity: 0.9;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+/*? CREATE SKILLS GRID  */
 #skillsSection {
     height: 500px;
-    margin: 50px 0px;
+    margin-bottom: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,63 +139,107 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
+/*? General Grid Items */
 .gridItem {
+    z-index: 0;
+    /* Stops navbar going behind */
+    /* Positioning */
     align-self: center;
     justify-self: center;
     display: flex;
-    margin: 10px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 85%;
+    width: 85%;
+    /* Styling */
     border-radius: 10px;
     font-size: 90px;
     color: #286d5d;
-    height: 85%;
-    width: 85%;
     background-color: rgba(10, 55, 65, 1);
-    transition: 0.5s all ease;
+    /* Animations */
+    transform: translate(0px, 0px);
+    transition: 0.35s all ease;
 }
 
 .gridItem:hover {
+    /* Positioning */
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    /* Styling */
     color: white;
     background-color: #286d5d;
-    height: 95%;
-    width: 95%;
-    margin: 0px;
-    transition: 0.5s all ease;
-    align-items: start;
-    font-size: 50px;
-    padding-top: 10px;
 }
-.skillTxt > h6{
-    font-size:15px;
-    display:none;
+
+/*? Grid Icons */
+.gridItem>i {
+    /* Positioning - Sets starting position for icons */
+    transition: 0.35s all ease;
+    position: relative;
+    transform: translate(0px, 0px);
 }
-.gridItem:hover > .skillTxt > h6{
-    display:block;
-    transition: 0.5s all ease;
+
+.gridItem:hover>i {
+    /* Positioning - Sets hover over position for icons */
+    position: absolute;
+    transform: scale(0.5) translate(0px, -100px);
 }
-.skillTxt > p{
+
+/*? Grid Text  */
+.skillTxt {
+    /* Positioning */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    transition: 0.35s all ease;
+}
+
+/*? Grid Headings  */
+.skillTxt>h6 {
+    /* Positioning */
+    text-align: center;
+    justify-self: center;
+    position: relative;
+    margin: 0px 10px;
+    /* Styling */
+    font-size: 20px;
+    display: none;
+    /* Hides txt until hover */
+}
+
+.gridItem:hover>.skillTxt>h6 {
+    /* Show Text */
+    display: block;
+}
+
+#sqlTxt>h6 {
+    /* Multiple headings so needed smaller text */
+    font-size: 14px;
+}
+
+/*?Grid Paragraphs  */
+.skillTxt>p {
+    /* Positioning */
+    justify-self: center;
+    align-self: end;
+    position: relative;
+    padding: 0px 15px;
+    height: 80px;
+    /* Styling */
     font-size: 12px;
-    display:none;
-}
-.gridItem:hover > .skillTxt > p{
-    display:block;
-    transition: 0.5s all ease;
+    display: none;
+    /* Hides txt until hover  */
 }
 
-#htmlBubble,
-#pythonBubble,
-#flaskBubble {
-    justify-self: end;
+.gridItem:hover>.skillTxt>p {
+    /* Show txt */
+    display: block;
 }
 
-#jsBubble,
-#sqlBubble,
-#githubBubble {
-    justify-self: start;
-}
-
-/* Projects */
+/*? Projects */
 .projects {
     display: grid;
     height: 500px;
@@ -194,15 +259,26 @@ body {
     grid-template-rows: 60% 40%;
     background-color: #286d5d;
     width: 25%;
-    height: 400px;
+    height: 500px;
     border-radius: 20px;
     overflow: hidden;
     border: 2px black solid;
+    font-size: 15px;
+}
+
+.projects .card_container .card h2 {
+    font-size: 25px;
+}
+
+.projects .card_container .card .desc {
+    padding: 0px 15px;
+    font-size: 13px;
 }
 
 .projects .card_container .card .image img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .projects .card_container .card .text {
