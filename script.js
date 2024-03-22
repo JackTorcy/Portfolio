@@ -1,5 +1,5 @@
 //!variable declaration
-let ballNum = 250;
+let ballNum = 300;
 let ballSize = 4;
 let balls = [];
 
@@ -8,15 +8,15 @@ for (let i = 0; i < ballNum; i++) {
     //Create balls
     let ball = document.createElement('div'); // create div's
     ball.classList.add('ball'); //add class
-    
+
     //Ball Position
-    ball.style.top = `${Math.floor(Math.random() * 165)}vh`; //Random y-axis starting point //!Max Screen VH of 215
+    ball.style.top = `${Math.floor(Math.random() * 275)}vh`; //Random y-axis starting point //!Max Screen VH of 215
     ball.style.left = `${Math.floor(Math.random() * 99)}vw`;//Random x-axis starting point
 
     //Ball Size
     ball.style.height = `${ballSize}px`; //ball height
     ball.style.width = ball.style.height; //ball width - same as height
-    
+
     //Puts balls on the screen
     balls.push(ball) // add ball to the balls array
     document.body.append(ball) //Adds the ball to the body individually
@@ -25,7 +25,7 @@ for (let i = 0; i < ballNum; i++) {
 //!Gives balls movement
 for (let i = 0; i < balls.length; i++) {
     //Defines current iteration
-    let currentBall = balls[i] 
+    let currentBall = balls[i]
 
     //Random value in range generator
     function randomValue(min, max) {
@@ -40,18 +40,43 @@ for (let i = 0; i < balls.length; i++) {
     transformx2 = randomValue(-10, 10)
     transformy2 = randomValue(-10, 10)
     //Speed - between 20-30s for full animation
-    animationLen = randomValue(20000,30000)
+    animationLen = randomValue(20000, 30000)
 
 
     currentBall.animate([
-        {transform: `translate(0px,0px)`,easing:'ease-in'},
-        {transform: `translate(${transformx1}vw,${transformy1}vh)`,easing:'linear'},
-        {transform: `translate(${transformx2}vw,${transformy2}vh)`,easing:'linear'},
-        {transform: `translate(0px,0px)`, easing:'ease-out'}
+        { transform: `translate(0px,0px)`, easing: 'ease-in' },
+        { transform: `translate(${transformx1}vw,${transformy1}vh)`, easing: 'linear' },
+        { transform: `translate(${transformx2}vw,${transformy2}vh)`, easing: 'linear' },
+        { transform: `translate(0px,0px)`, easing: 'ease-out' }
 
     ], {
         duration: animationLen,
         iterations: Infinity,
     });;
 }
+const about = document.querySelector('.about');
+const aboutObserver = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+        // If the element is visible
+        if (entry.isIntersecting) {
+            // Add the animation class
+            about.classList.add('about-animation');
+            return;
+        }
+    });
+});
+aboutObserver.observe(document.querySelector('.about'));
 
+const skillBox = document.querySelectorAll('.gridItem');
+const skillsObserver = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+        // If the element is visible
+        if (entry.isIntersecting) {
+            // Add the animation class
+            entry.target.classList.add('skills-animation');
+        }
+    });
+});
+skillBox.forEach((element) => skillsObserver.observe(element));
