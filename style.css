@@ -141,6 +141,7 @@ body {
 /* About */
 #aboutSection {
     margin-top: 180px;
+    margin-bottom: 150px;
     height: 400px;
     display: flex;
     align-items: center;
@@ -241,7 +242,8 @@ body {
 
 #skillsHeader {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 100px;
+    padding-top: 100px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -264,7 +266,7 @@ body {
 /*? CREATE SKILLS GRID  */
 #skillsSection {
     height: 500px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -379,11 +381,26 @@ body {
 }
 
 /*? Projects */
-#projectsHeader{
-    
+#projectsHeader {
+    width: 100%;
+    margin-top: 180px;
+    margin-bottom: 30px;
+    padding-left: 100px;
 }
-#projectsTitle{
 
+#projectsTitle {
+    font-family: Chakra;
+    font-weight: 100;
+    letter-spacing: 5px;
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+#projectsSubtitle {
+    font-family: chakra;
+    font-weight: 100;
+    letter-spacing: 2px;
+    display: block;
 }
 
 .projectsSection {
