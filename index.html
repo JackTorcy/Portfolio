@@ -23,7 +23,7 @@
                     <li><a href="#aboutLink">About</a></li>
                     <li><a href="#skillsLink">Skills</a></li>
                     <li><a href="#projectsLink">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contactLink">Contact</a></li>
                     <li><a href="cvOld.pdf" target="_blank">My CV</a></li>
                 </ul>
             </div>
@@ -34,6 +34,14 @@
         <div class="headerTxt">
             <div class="heading"><span class="fontChange">J</span>ack <span class="fontChange">T</span>orcy</div>
             <div class="headingAbout">Back-end Software Developer</div>
+            <div class="headingIcons">
+                <a class="iconLinks" target="_blank" href="https://github.com/JackTorcy">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a class="iconLinks" target="_blank" href="https://www.linkedin.com/in/jacktorcy/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
         </div>
     </section>
     <div id="aboutLink"></div>
@@ -104,7 +112,7 @@
                 <div class="skillTxt">
                     <h6>JavaScript</h6>
                     <p>One of my primary languages, I have used it in my portfolio and the majority of
-                        my project 1 - 'Snake Game'</p>
+                        my project 1 - 'Snake Game'.</p>
                 </div>
             </div>
             <div class="gridItem" id="pythonBubble">
@@ -135,8 +143,8 @@
                 <i class="fa-solid fa-flask"></i>
                 <div class="skillTxt">
                     <h6>Flask</h6>
-                    <p>Using the extra time I had on the bootcamp, I taught myself Flask and used it develop a fullstack
-                        application </p>
+                    <p>Using the extra week I had on the bootcamp, I taught myself Flask and used it develop a fullstack
+                        application.</p>
                 </div>
             </div>
             <div class="gridItem" id="bootstrapBubble">
@@ -151,8 +159,8 @@
                 <i class="fa-brands fa-github"></i>
                 <div class="skillTxt">
                     <h6>GitHub</h6>
-                    <p>Learning to navigate GitHub and version control by committing changes and working on branches
-                        from my solo projects.</p>
+                    <p>Learning to navigate GitHub and use version control by committing changes and working on branches
+                        in my solo projects.</p>
                 </div>
             </div>
         </div>
@@ -163,49 +171,78 @@
         <p id="projectsSubtitle">Gallery of web applications</p>
     </div>
     <section id="projectSection">
-        <a class="card" target="_blank" href="https://jacktorcy.github.io/JustIT-ProjectWeek1/">
+        <a class="card" id="card1" target="_blank" href="https://jacktorcy.github.io/JustIT-ProjectWeek1/">
             <div class="image">
                 <img src="Images/proj1.PNG" alt="placeholder image">
             </div>
             <div class="text">
-                <h2>Snake Game</h2>
-                <p>HTML | CSS | JavaScript</p>
-                <p>5 Days / 15 Hours</p>
-                <p class="desc">Fully functioning retro snake game made in my first project week using knowledge
-                    gained on the
-                    course</p>
+                <h5>Snake Game</h5>
+                <p class="details">HTML | CSS | JavaScript</p>
+                <p class="details">15 Hours</p>
+                <p class="desc">
+                    This is the first project I developed. It is fully functional responsive website and
+                    includes score tracking and animations. In this project I made a retro snake game to help develop my
+                    JavaScript skills as well as refine my HTML and CSS. I would improve the aesthetic if I had more
+                    time to spend on it.
+                </p>
+
             </div>
         </a>
-        <a class="card" target="_blank" href="https://replit.com/@Jack253/FilmFlix">
+        <a class="card" id="card2" target="_blank" href="https://replit.com/@Jack253/FilmFlix">
             <div class="image">
-                <iframe src="https://replit.com/@Jack253/FilmFlix?embed=true" width="100%" height="100%"></iframe>
+                <iframe style="border: 0px;" src="https://replit.com/@Jack253/FilmFlix?embed=true" width="100%"
+                    height="100%"></iframe>
             </div>
             <div class="text">
-                <h2>Command Line Database</h2>
-                <p>Python | Sqlite3</p>
-                <p>2 Days / 6 Hours</p>
-                <p class="desc">Set as the second project week's task, I made a CRUD command line database using
-                    only 2 of the 5 days</p>
+                <h5>Command Line Database</h5>
+                <p class="details">Python | Sqlite3</p>
+                <p class="details">6 Hours</p>
+                <p class="desc">
+                    This is a command line database, developed over a short period of time.
+                    Set as the second project week's task, I made a CRUD command line database using only 2 of the 5
+                    days 
+                </p>
             </div>
         </a>
-        <a class="card" target="_blank" href="https://filmflix-50dn.onrender.com">
+        <a class="card" id="card3" target="_blank" href="https://filmflix-50dn.onrender.com">
             <div class="image">
                 <img src="Images/proj3.PNG" alt="">
             </div>
             <div class="text">
-                <h2>Fullstack Flask Database</h2>
-                <p>HTML | Jinja | CSS | Bootstrap</p>
-                <p>Python | Sqlite3 | Flask</p>
-                <p>6 Days / 18 Hours</p>
+                <h5>Fullstack Flask Database</h5>
+                <p class="details">HTML | Jinja | CSS | Bootstrap</p>
+                <p class="details">Python | Sqlite3 | Flask</p>
+                <p class="details">18 Hours</p>
                 <p class="desc">Made an additional project outside of the bootcamp curriculum, taught myself
                     Flask
                     and built a fully functioning fullstack application.</p>
-                <p>(May take a moment to load)</p>
+                <p class="desc">(May take a moment to load)</p>
+
             </div>
         </a>
+    </section>
+    <div id="contactLink"></div>
+    <section class="contactSection">
+        <h2 id="contactHello">Get in touch:</h2>
+        <a id="contactEmail" href="mailto:jack@torcy.com">
+            <div>SAY HELLO</div>
+        </a>
+    </section>
+
+    <section class="footerSection">
+        <div id="footerContact">
+            <h6>jack@torcy.com || 07476602781</h6>
+        </div>
+        <div id="footerLinksBox">
+            <a class="footerLinks" target="_blank" href="https://github.com/JackTorcy">
+                <i class="fa-brands fa-square-github"></i>
+            </a>
+            <a class="footerLinks" target="_blank" href="https://www.linkedin.com/in/jacktorcy/">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
 
     </section>
-    <div class="footer">test</div>
 </body>
 
 </html>

@@ -10,7 +10,7 @@ for (let i = 0; i < ballNum; i++) {
     ball.classList.add('ball'); //add class
 
     //Ball Position
-    ball.style.top = `${Math.floor(Math.random() * 275)}vh`; //Random y-axis starting point //!Max Screen VH of 215
+    ball.style.top = `${Math.floor(Math.random() * 350)}vh`; //Random y-axis starting point //!Max Screen VH of 350
     ball.style.left = `${Math.floor(Math.random() * 99)}vw`;//Random x-axis starting point
 
     //Ball Size
@@ -66,7 +66,7 @@ const aboutObserver = new IntersectionObserver(entries => {
         }
     });
 });
-aboutObserver.observe(document.querySelector('.about'));
+aboutObserver.observe(about);
 
 const skillBox = document.querySelectorAll('.gridItem');
 const skillsObserver = new IntersectionObserver(entries => {
@@ -80,3 +80,45 @@ const skillsObserver = new IntersectionObserver(entries => {
     });
 });
 skillBox.forEach((element) => skillsObserver.observe(element));
+
+const project1 = document.querySelector('#card1');
+const project1Observer = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+        // If the element is visible
+        if (entry.isIntersecting) {
+            // Add the animation class
+            project1.classList.add('card1-animation');
+            return;
+        }
+    });
+});
+project1Observer.observe(project1)
+
+const project2 = document.querySelector('#card2');
+const project2Observer = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+        // If the element is visible
+        if (entry.isIntersecting) {
+            // Add the animation class
+            project2.classList.add('card2-animation');
+            return;
+        }
+    });
+});
+project2Observer.observe(project2)
+
+const project3 = document.querySelector('#card3');
+const project3Observer = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+        // If the element is visible
+        if (entry.isIntersecting) {
+            // Add the animation class
+            project3.classList.add('card3-animation');
+            return;
+        }
+    });
+});
+project3Observer.observe(project3)

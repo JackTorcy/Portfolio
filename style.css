@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@100;200;300;400;500;600;700&display=swap');
 
 /*? Colours */
 /* Card colours: #286d5d */
@@ -66,6 +66,7 @@ body {
     text-decoration: none;
     color: white;
     font-weight: 300;
+    font-family: Chakra Petch;
 }
 
 .navCV {
@@ -116,6 +117,7 @@ body {
 }
 
 .headerTxt>.heading {
+    margin-bottom: 5px;
     font-size: 90px;
     word-spacing: 15px;
     letter-spacing: 5px;
@@ -134,8 +136,27 @@ body {
 .headerTxt>.headingAbout {
     font-size: 20px;
     letter-spacing: 2px;
-    font-family: Chakra;
+    font-family: Chakra Petch;
     animation: fade-in-bottom 1.5s ease-out 1s both;
+    margin-bottom:10px;
+}
+.headerTxt>.headingIcons{
+    display:flex;
+    justify-self: center;
+    justify-content: center;
+}
+.headerTxt>.headingIcons>.iconLinks{
+    animation: fade-in-bottom 1.5s 1.75s ease-out both;
+    margin: 0px 5px;
+    height:60px;
+    width:60px;
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.25);
+    font-size: 50px;
+    transition: color 0.5s ease ;
+}
+.headerTxt>.headingIcons>.iconLinks:hover{
+    color: white;
 }
 
 /* About */
@@ -164,7 +185,7 @@ body {
 
 @media (prefers-reduced-motion: no-preference) {
     .about-animation {
-        animation: slide-in-elliptic-bottom-fwd 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-in-elliptic-bottom-fwd 1.5s 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
     }
 }
@@ -192,13 +213,14 @@ body {
 .about .text h2 {
     padding-bottom: 10px;
     font-size: 2.2em;
-    font-family: Chakra;
+    font-family: Chakra Petch;
     font-weight: 500;
 }
 
 .aboutHighlight {
     font-style: italic;
     font-weight: 700;
+    font-family: Chakra Petch;
 }
 
 .about>.portrait {
@@ -237,7 +259,7 @@ body {
 
 @media (prefers-reduced-motion: no-preference) {
     .skills-animation {
-        animation: puff-in 1s 1;
+        animation: puff-in 1s;
 
     }
 }
@@ -261,7 +283,7 @@ body {
 }
 
 #skillsTitle>h2 {
-    font-family: Chakra;
+    font-family: Chakra Petch;
     font-weight: 400;
 }
 
@@ -348,6 +370,7 @@ body {
     position: relative;
     margin: 0px 10px;
     /* Styling */
+    font-family: Chakra Petch;
     font-size: 20px;
     font-weight: 300;
     display: none;
@@ -393,20 +416,85 @@ body {
     margin-bottom: 30px;
     padding-left: 100px;
 }
+
 #projectsTitle {
-    font-family: Chakra; 
+    font-family: Chakra Petch;
     font-weight: 100;
     letter-spacing: 5px;
     font-size: 40px;
     padding-bottom: 10px;
 }
+
 #projectsSubtitle {
-    font-family: chakra;
+    font-family: Chakra Petch;
     font-weight: 100;
     letter-spacing: 2px;
     display: block;
 }
-/* Project cards */
+
+/*? Project cards */
+/* Keyframes */
+@keyframes card1-animation {
+    0% {
+        transform: translateX(-1000px);
+        filter: blur(5px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes card2-animation {
+    0% {
+        transform: translateY(1000px);
+        filter: blur(5px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes card3-animation {
+    0% {
+        transform: translateX(1000px);
+        filter: blur(5px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animations */
+@media (prefers-reduced-motion: no-preference) {
+    .card1-animation {
+        animation: card1-animation 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .card2-animation {
+        animation: card2-animation 1s 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .card3-animation {
+        animation: card3-animation 1s 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    }
+}
+
 #projectSection {
     display: flex;
     height: 500px;
@@ -416,7 +504,7 @@ body {
     align-items: center;
 }
 
-#projectSection > .card {
+#projectSection>.card {
     text-decoration: none;
     color: white;
     display: grid;
@@ -426,39 +514,129 @@ body {
     height: 500px;
     border-radius: 20px;
     overflow: hidden;
-    border: 2px black solid;
     font-size: 15px;
+    box-shadow: rgb(40, 109, 93, 0.7) 0px 0px 20px 5px;
+    transition: all 0.5s ease;
+
 }
 
-#projectSection > .card > .image > img {
+#projectSection>.card:hover {
+    height: 520px;
+    box-shadow: rgb(40, 109, 93, 1) 0px 0px 20px 5px;
+    filter: brightness(1.05);
+}
+
+#projectSection>.card>.image>img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-#projectSection > .card > .text {
+#projectSection>.card>.text {
     padding: 10px;
     text-align: center;
-    border-top: 2px black solid;
-}
-
-#projectSection > .card > .text > h2 {
-    font-family: Chakra;
+    border-top: 1px black solid;
     font-weight: 100;
-    font-size: 25px;
 }
 
-#projectSection > .card > .text > .desc {
-    padding: 0px 15px;
+#projectSection>.card>.text>h5 {
+    font-weight: 500;
+    font-size: 25px;
+    font-family: Chakra Petch;
+}
+
+#projectSection>.card>.text>.details {
+    font-style: italic;
+    font-weight: 400;
+    font-family: Chakra Petch;
+}
+
+#projectSection>.card>.text>.desc {
+    font-weight: 200;
     font-size: 13px;
 }
 
-/* FOOTER */
-.footer {
+
+/*? Contact */
+.contactSection {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 1.5px;
+}
+
+.contactSection>#contactHello {
+    font-size: 2.5rem;
+    font-family: Chakra Petch;
+    margin-left: 425px;
+    font-weight: 300;
+    
+
+}
+
+.contactSection>#contactEmail {
+    margin-right: 425px;
+    border-radius: 15px;
+    height: 40px;
+    width: 120px;
+    color: #286d5d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 0 20px 5px #286d5d;
+    transition-property: background-color, border-color, color, box-shadow, transform;
+    transition-duration: .3s;
+    border: 2px solid #286d5d;
+}
+
+.contactSection>#contactEmail:hover {
+    background-color: #286d5d;
+    color: white;
+    transform: scale(0.95);
+    box-shadow: 0 0 20px 5px #286d5d;
+}
+
+
+/*? FOOTER */
+.footerSection {
+    display:flex;
+    justify-content: space-around;
     margin-top: 100px;
-    height: 25px;
+    margin-bottom: 25px;
+    height: 50px;
     /* background-color: black; */
     bottom: 0px;
+}
+.footerSection>#footerContact{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    font-size: 25px;
+}
+.footerSection>#footerContact>h6{
+    font-weight: 100;
+    font-family: Chakra Petch;
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
+.footerSection>#footerLinksBox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerSection>#footerLinksBox>.footerLinks{
+    margin: 0px 3px;
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.25);
+    font-size: 30px;
+    transition: color 0.5s ease ;
 }
 
 .ball {
