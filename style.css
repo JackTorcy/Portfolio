@@ -148,21 +148,23 @@ body {
     justify-content: center;
 }
 
-@keyframes scale-in {
+@keyframes slide-in-elliptic-bottom-fwd {
     0% {
-        transform: scale(0);
+        transform: translateY(600px) rotateX(30deg) scale(0);
+        transform-origin: 50% 100%;
         opacity: 0;
     }
 
     100% {
-        transform: scale(1);
+        transform: translateY(0) rotateX(0) scale(1);
+        transform-origin: 50% -1400px;
         opacity: 1;
     }
 }
 
 @media (prefers-reduced-motion: no-preference) {
     .about-animation {
-        animation: scale-in 1s ease-out both;
+        animation: slide-in-elliptic-bottom-fwd 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
     }
 }
@@ -347,6 +349,7 @@ body {
     margin: 0px 10px;
     /* Styling */
     font-size: 20px;
+    font-weight: 300;
     display: none;
     /* Hides txt until hover */
 }
@@ -359,6 +362,7 @@ body {
 #sqlTxt>h6 {
     /* Multiple headings so needed smaller text */
     font-size: 14px;
+
 }
 
 /*?Grid Paragraphs  */
@@ -371,6 +375,7 @@ body {
     height: 80px;
     /* Styling */
     font-size: 11px;
+    font-weight: 100;
     display: none;
     /* Hides txt until hover  */
 }
