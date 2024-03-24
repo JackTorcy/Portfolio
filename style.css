@@ -1,55 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+/*! Fonts !*/
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@100;200;300;400;500;600;700&display=swap');
 
-/*? Colours */
-/* Card colours: #286d5d */
-/* Word Colours: white */
-/* Skills BG colours: rgba(10, 55, 65) */
+/*! Colours !*/
+/*? Card colours: #286d5d ?*/
+/*? Word Colours: white ?*/
+/*? Skills BG colours: rgba(10, 55, 65) ?*/
+
+/*! General Document Configuration !*/
 html {
+    /** Page Behavior **/
     zoom: 125%;
     scroll-behavior: smooth;
 }
 
-* {
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-
 body {
+    /** Background **/
     background-image: url(Images/background.png);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    /** Text **/
+    font-family: 'Nunito', sans-serif;
     color: white;
+    /** Page Behavior **/
     overflow-x: hidden;
 }
 
-/* NAVBAR */
+* {
+    /** Positioning **/
+    margin: 0;
+    padding: 0;
+}
+
+/*? Background - Ball Properties ?*/
+.ball {
+    /** Positioning **/
+    position: absolute;
+    margin: 0px;
+    border-radius: 100%;
+    z-index: -1;
+    /** Appearance **/
+    background-color: #8094c261;
+    opacity: 100%;
+}
+
+/*! NAVBAR !*/
+/*? Navbar - General Area ?*/
 .banner {
-    width: 100%;
-    z-index: 2;
+    /** Positioning **/
     position: sticky;
     top: 0px;
     display: flex;
     justify-content: center;
+    width: 100%;
+    z-index: 2;
+    /** Appearance **/
     backdrop-filter: blur(25px) opacity(100%) contrast(90%);
 }
 
+/*? Navbar - Image ?*/
 .banner .logo {
+    /** Positioning **/
     display: flex;
     align-items: center;
 }
 
 .banner .logo img {
+    /** Positioning **/
     max-height: 32px;
     max-width: 32px;
 }
 
+/*? Navbar - Links ?*/
 .banner nav ul {
+    /** Positioning **/
     display: flex;
     justify-content: center;
     margin: 0px 60px;
@@ -57,30 +82,36 @@ body {
 
 
 .banner nav ul li {
-    list-style: none;
+    /** Positioning **/
     padding: 20px;
-
+    /** Appearance **/
+    list-style: none;
 }
 
 .banner nav ul li a {
+    /** Appearance **/
     text-decoration: none;
     color: white;
     font-weight: 300;
     font-family: Chakra Petch;
 }
 
+/*? Navbar - CV ?*/
 .navCV {
+    /** Positioning **/
     display: flex;
     justify-content: center;
     align-items: center;
+    /** Appearance **/
     color: white;
 }
 
-/* Header */
-@keyframes fade-in-top {
+/*! Home Page !*/
+/*? Home - Animations ?*/
+/** Title Animation **/
+@keyframes title-fade-in {
     0% {
         transform: translateY(-50px);
-
         opacity: 0;
     }
 
@@ -90,7 +121,8 @@ body {
     }
 }
 
-@keyframes fade-in-bottom {
+/** Description and Socials Animations **/
+@keyframes description-fade-in {
     0% {
         transform: translateY(50px);
         opacity: 0;
@@ -102,76 +134,89 @@ body {
     }
 }
 
+/*? Home - General Area ?*/
 #headerSection {
-    margin-top: 200px;
-    height: 400px;
+    /** Positioning **/
     display: flex;
-    align-items: start;
     justify-content: center;
+    align-items: start;
+    height: 400px;
+    margin-top: 200px;
 }
 
+/*? Home - All Text ?*/
 .headerTxt {
+    /** Positioning **/
     width: 50%;
     text-align: center;
 }
 
+/*? Home - Title ?*/
 .headerTxt>.heading {
+    /** Positioning **/
     margin-bottom: 5px;
+    /** Appearance **/
+    font-family: Chakra;
     font-size: 90px;
+    font-style: italic;
     word-spacing: 15px;
     letter-spacing: 5px;
-    font-family: Chakra;
-    font-style: italic;
-    animation: fade-in-top 1.5s ease-out both;
+    /** Animation **/
+    animation: title-fade-in 1.5s ease-out both;
 }
 
+/*? Home - Title First Letters ?*/
 .fontChange {
-    font-size: 130px;
+    /** Appearance **/
     font-family: Chakra;
+    font-size: 130px;
     font-style: normal;
     font-weight: bold;
 }
 
+/*? Home - Description ?*/
 .headerTxt>.headingAbout {
+    /** Positioning **/
+    margin-bottom: 10px;
+    /** Appearance **/
+    font-family: Chakra Petch;
     font-size: 20px;
     letter-spacing: 2px;
-    font-family: Chakra Petch;
-    animation: fade-in-bottom 1.5s ease-out 1s both;
-    margin-bottom: 10px;
+    /** Animation **/
+    animation: description-fade-in 1.5s ease-out 1s both;
 }
 
+/*? Home - Icons ?*/
 .headerTxt>.headingIcons {
+    /** Positioning **/
     display: flex;
     justify-self: center;
     justify-content: center;
 }
 
 .headerTxt>.headingIcons>.iconLinks {
-    animation: fade-in-bottom 1.5s 1.75s ease-out both;
-    margin: 0px 5px;
-    height: 60px;
+    /** Positioning **/
     width: 60px;
-    text-decoration: none;
-    color: rgb(255, 255, 255, 0.25);
+    height: 60px;
+    margin: 0px 5px;
+    /** Appearance **/
     font-size: 50px;
+    color: rgb(255, 255, 255, 0.25);
+    text-decoration: none;
+    /** Animation **/
+    animation: description-fade-in 1.5s 1.75s ease-out both;
     transition: color 0.5s ease;
 }
 
 .headerTxt>.headingIcons>.iconLinks:hover {
+    /** Appearance **/
     color: white;
 }
 
-/* About */
-#aboutSection {
-    margin-top: 180px;
-    margin-bottom: 150px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@keyframes slide-in-elliptic-bottom-fwd {
+/*! About !*/
+/*? About - Animations ?*/
+/** About Entrance **/
+@keyframes about-entrance {
     0% {
         transform: translateY(600px) rotateX(30deg) scale(0);
         transform-origin: 50% 100%;
@@ -185,69 +230,95 @@ body {
     }
 }
 
+/** About Animation - Plays on Enter Screen **/
 @media (prefers-reduced-motion: no-preference) {
     .about-animation {
-        animation: slide-in-elliptic-bottom-fwd 1.5s 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
+        animation: about-entrance 1.5s 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 }
 
+/*? About - General Area ?*/
+#aboutSection {
+    /** Positioning **/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 180px;
+    margin-bottom: 150px;
+}
+
 .about {
+    /** Positioning **/
     display: grid;
     grid-template-columns: 2fr 1fr;
-    height: 100%;
-    width: 60%;
     justify-self: center;
     align-self: center;
+    width: 60%;
+    height: 100%;
     border-radius: 30px;
-    overflow: hidden;
-    /* background-image: url(Images/background2.jpg); */
+    /** Appearance **/
     background-color: #286d5d;
     box-shadow: 0 0 20px 1px #286d5d;
+    overflow: hidden;
 }
 
+/*? About - All Text ?*/
 .about .text {
-    height:100%;
-    padding: 25px;
-    font-weight: 200;
+    /** Positioning **/
     align-self: center;
+    height: 100%;
+    padding: 25px;
+    /** Appearance **/
+    font-weight: 200;
 }
 
+/*? About - Title ?*/
 .about .text h2 {
+    /** Positioning **/
     padding: 10px 0px;
-    font-size: 2.2em;
+    /** Appearance **/
     font-family: Chakra Petch;
+    font-size: 2.2em;
     font-weight: 500;
 }
 
+/*? About - Highlighted Text ?*/
 .aboutHighlight {
-    font-style: italic;
-    font-weight: 700;
+    /** Appearance **/
     font-family: Chakra Petch;
+    font-weight: 700;
+    font-style: italic;
 }
 
+/*? About - Image ?*/
 .about>.portrait {
-    margin-bottom: 20px;
+    /** Positioning **/
+    position: relative;
     justify-self: center;
     align-self: center;
-    height: 200px;
     width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
     border-radius: 50%;
+    /** Appearance **/
     background-color: white;
-    overflow: hidden;
-    position: relative;
     box-shadow: 0 0 20px 2px #fff;
+    overflow: hidden;
 }
 
 .about>.portrait>img {
+    /** Positioning **/
     position: absolute;
     top: -245px;
     left: -30px;
     zoom: 25%;
 }
 
-/* Skills */
-@keyframes puff-in {
+/*! Skills !*/
+/*? Skills - Animations ?*/
+/** Skills Entrance **/
+@keyframes skill-entrance {
     0% {
         transform: scale(2);
         filter: blur(4px);
@@ -261,183 +332,168 @@ body {
     }
 }
 
+/** Animation plays on entrance to viewport **/
 @media (prefers-reduced-motion: no-preference) {
     .skills-animation {
-        animation: puff-in 1s;
-
+        animation: skill-entrance 1s;
     }
 }
 
+/*? Skills - Title ?*/
 #skillsHeader {
-    width: 100%;
-    margin-top: 100px;
-    padding-top: 100px;
-    margin-bottom: 20px;
+    /** Positioning **/
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    padding-top: 100px;
 }
 
 #skillsTitle {
+    /** Positioning **/
     display: flex;
     justify-self: center;
     justify-content: center;
     width: 0%;
-    letter-spacing: 5px;
+    /** Appearance **/
     font-size: 30px;
+    letter-spacing: 5px;
 }
 
 #skillsTitle>h2 {
+    /** Appearance **/
     font-family: Chakra Petch;
     font-weight: 400;
 }
 
-/*? CREATE SKILLS GRID  */
+/*? Skills - General Area  */
 #skillsSection {
+    /** Positioning **/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 500px;
     margin-bottom: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
+/*? Skills Grid - Container ?*/
 .skills {
+    /** Positioning **/
     display: grid;
-    width: 40%;
-    height: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    width: 40%;
+    height: 100%;
 }
 
-/*? General Grid Items */
+/*? Skills Grid - Item */
 .gridItem {
-    z-index: 0;
-    /* Stops navbar going behind */
-    /* Positioning */
-    align-self: center;
-    justify-self: center;
+    /** Positioning **/
     display: flex;
-    align-items: center;
+    justify-self: center;
+    align-self: center;
     justify-content: center;
-    height: 85%;
+    align-items: center;
     width: 85%;
-    /* Styling */
+    height: 85%;
     border-radius: 10px;
-    font-size: 90px;
+    z-index: 0;
+    /** Appearance **/
     color: #286d5d;
     background-color: rgba(10, 55, 65);
-    /* Animations */
+    font-size: 90px;
+    /** Animations **/
     transform: translate(0px, 0px);
     transition: 0.35s all ease;
 }
 
 .gridItem:hover {
-    /* Positioning */
-    height: 100%;
+    /** Positioning **/
     width: 100%;
+    height: 100%;
     margin: 0px;
-    /* Styling */
+    /** Appearance **/
     color: white;
     background-color: #286d5d;
 }
 
-/*? Grid Icons */
+/*? Skills Grid - Icons */
 .gridItem>i {
-    /* Positioning - Sets starting position for icons */
-    transition: 0.35s all ease;
+    /** Positioning **/
     position: relative;
+    /** Animation **/
     transform: translate(0px, 0px);
+    transition: 0.35s all ease;
 }
 
 .gridItem:hover>i {
-    /* Positioning - Sets hover over position for icons */
+    /** Positioning **/
     position: absolute;
+    /** Animation **/
     transform: scale(0.5) translate(0px, -100px);
 }
 
-/*? Grid Text  */
+/*? Skills Grid - All Text  */
 .skillTxt {
-    /* Positioning */
-    text-align: center;
+    /** Positioning **/
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin-top: 60px;
+    text-align: center;
+    /** Animation **/
     transition: 0.35s all ease;
 }
 
-/*? Grid Headings  */
+/*? Skills Grid - Headings  */
 .skillTxt>h6 {
-    /* Positioning */
-    text-align: center;
+    /** Positioning **/
     justify-self: center;
     position: relative;
     margin: 0px 10px;
-    /* Styling */
+    text-align: center;
+    /** Appearance **/
     font-family: Chakra Petch;
     font-size: 20px;
     font-weight: 300;
     display: none;
-    /* Hides txt until hover */
 }
 
 .gridItem:hover>.skillTxt>h6 {
-    /* Show Text */
+    /** Appearance **/
     display: block;
 }
 
 #sqlTxt>h6 {
-    /* Multiple headings so needed smaller text */
+    /** Appearance - Display SQL titles smaller as more headings **/
     font-size: 14px;
 
 }
 
-/*?Grid Paragraphs  */
+/*? Skills Grid - Details ?*/
 .skillTxt>p {
-    /* Positioning */
+    /** Positioning **/
     justify-self: center;
     align-self: end;
     position: relative;
-    padding: 0px 15px;
     height: 80px;
-    /* Styling */
+    padding: 0px 15px;
+    /** Appearance **/
     font-size: 11px;
     font-weight: 100;
     display: none;
-    /* Hides txt until hover  */
 }
 
 .gridItem:hover>.skillTxt>p {
-    /* Show txt */
+    /** Appearance **/
     display: block;
 }
 
-/*? Projects */
-/* Projects Title section */
-#projectsHeader {
-    width: 100%;
-    margin-top: 180px;
-    margin-bottom: 30px;
-    padding-left: 100px;
-}
-
-#projectsTitle {
-    font-family: Chakra Petch;
-    font-weight: 100;
-    letter-spacing: 5px;
-    font-size: 40px;
-    padding-bottom: 10px;
-}
-
-#projectsSubtitle {
-    font-family: Chakra Petch;
-    font-weight: 100;
-    letter-spacing: 2px;
-    display: block;
-}
-
-/*? Project cards */
-/* Keyframes */
+/*! Projects !*/
+/*? Projects - Animations - Keyframes ?*/
+/** Card1 Animation **/
 @keyframes card1-animation {
     0% {
         transform: translateX(-1000px);
@@ -451,6 +507,7 @@ body {
     }
 }
 
+/** Card2 Animation **/
 @keyframes card2-animation {
     0% {
         transform: translateY(1000px);
@@ -464,6 +521,7 @@ body {
     }
 }
 
+/** Card3 Animation **/
 @keyframes card3-animation {
     0% {
         transform: translateX(1000px);
@@ -477,7 +535,8 @@ body {
     }
 }
 
-/* Animations */
+/*? Projects - Animations - Animations ?*/
+/** Card1 Animation **/
 @media (prefers-reduced-motion: no-preference) {
     .card1-animation {
         animation: card1-animation 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -485,6 +544,7 @@ body {
     }
 }
 
+/** Card2 Animation **/
 @media (prefers-reduced-motion: no-preference) {
     .card2-animation {
         animation: card2-animation 1s 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -492,6 +552,7 @@ body {
     }
 }
 
+/** Card3 Animation **/
 @media (prefers-reduced-motion: no-preference) {
     .card3-animation {
         animation: card3-animation 1s 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -499,257 +560,365 @@ body {
     }
 }
 
-#projectSection {
-    display: flex;
-    height: 500px;
+/*? Projects - Title Area ?*/
+#projectsHeader {
+    /** Positioning **/
     width: 100%;
-    margin-bottom: 150px;
-    justify-content: space-evenly;
-    align-items: center;
+    margin-top: 180px;
+    margin-bottom: 30px;
+    padding-left: 100px;
 }
 
+/*? Projects - Title ?*/
+#projectsTitle {
+    /** Positioning **/
+    padding-bottom: 10px;
+    /** Appearance **/
+    font-family: Chakra Petch;
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+
+/*? Projects - Subtitle ?*/
+#projectsSubtitle {
+    /** Appearance **/
+    font-family: Chakra Petch;
+    font-weight: 100;
+    letter-spacing: 2px;
+    display: block;
+}
+
+
+/*? Projects - General Area ?*/
+#projectSection {
+    /** Positioning **/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 150px;
+}
+
+/*? Projects - Cards ?*/
 #projectSection>.card {
-    text-decoration: none;
-    color: white;
+    /** Positioning **/
     display: grid;
     grid-template-rows: 60% 40%;
-    background-color: #286d5d;
     width: 25%;
     height: 500px;
     border-radius: 20px;
-    overflow: hidden;
-    font-size: 15px;
+    /** Appearance **/
+    color: white;
+    background-color: #286d5d;
     box-shadow: rgb(40, 109, 93, 0.7) 0px 0px 20px 5px;
+    font-size: 15px;
+    text-decoration: none;
+    overflow: hidden;
+    /** Animation **/
     transition: all 0.5s ease;
 
 }
 
 #projectSection>.card:hover {
+    /** Positioning **/
     height: 520px;
+    /** Appearance **/
     box-shadow: rgb(40, 109, 93, 1) 0px 0px 20px 5px;
     filter: brightness(1.05);
 }
 
+/*? Project cards - Image ?*/
 #projectSection>.card>.image>img {
-    height: 100%;
+    /** Positioning **/
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
+/*? Project cards - All Text ?*/
 #projectSection>.card>.text {
+    /** Positioning **/
     padding: 10px;
-    text-align: center;
     border-top: 1px black solid;
+    /** Appearance **/
     font-weight: 100;
+    text-align: center;
 }
 
+/*? Project cards - Title ?*/
 #projectSection>.card>.text>h5 {
-    font-weight: 500;
+    /** Appearance **/
+    font-family: Chakra Petch;
     font-size: 25px;
-    font-family: Chakra Petch;
+    font-weight: 500;
 }
 
+/*? Project cards - Languages/Hours ?*/
 #projectSection>.card>.text>.details {
-    font-style: italic;
-    font-weight: 400;
+    /** Appearance **/
     font-family: Chakra Petch;
-    font-size:15px;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
 }
 
+/*? Project cards - Description ?*/
 #projectSection>.card>.text>.desc {
-    font-weight: 200;
+    /** Appearance **/
     font-size: 13px;
+    font-weight: 200;
 }
 
 
-/*? Contact */
+/*! Contact !*/
+/*? Contact - General Area ?*/
 .contactSection {
-    height: 100px;
+    /** Positioning **/
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100px;
+    /** Appearance **/
     letter-spacing: 1.5px;
 }
 
+/*? Contact - Text ?*/
 .contactSection>#contactHello {
-    font-size: 2.5rem;
-    font-family: Chakra Petch;
+    /** Positioning **/
     margin-right: 250px;
+    /** Appearance **/
+    font-family: Chakra Petch;
+    font-size: 2.5rem;
     font-weight: 300;
 }
 
+/*? Contact - Button ?*/
 .contactSection>#contactEmail {
-    border-radius: 15px;
-    height: 40px;
-    width: 120px;
-    color: #286d5d;
+    /** Positioning **/
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-decoration: none;
-    font-style: italic;
-    font-weight: 700;
-    line-height: 1;
+    align-items: center;
+    border-radius: 15px;
+    width: 120px;
+    height: 40px;
+    border: 2px solid #286d5d;
+    /** Appearance **/
+    color: #286d5d;
     box-shadow: 0 0 20px 5px #286d5d;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: none;
+    /** Animation **/
     transition-property: background-color, border-color, color, box-shadow, transform;
     transition-duration: .3s;
-    border: 2px solid #286d5d;
 }
 
 .contactSection>#contactEmail:hover {
-    background-color: #286d5d;
-    color: white;
+    /** Positioning **/
     transform: scale(0.95);
+    /** Appearance **/
+    color: white;
+    background-color: #286d5d;
     box-shadow: 0 0 20px 5px #286d5d;
 }
 
 
-/*? FOOTER */
+/*! Footer !*/
+/*? Footer - General Area ?*/
 .footerSection {
+    /** Positioning **/
     display: flex;
     justify-content: space-around;
+    height: 50px;
     margin-top: 100px;
     margin-bottom: 25px;
-    height: 50px;
-    /* background-color: black; */
-    bottom: 0px;
 }
 
+/*? Footer - Contact Details Area ?*/
 .footerSection>#footerContact {
+    /** Positioning **/
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 50px;
+    /** Appearance **/
     font-size: 25px;
 }
 
+/*? Footer - Contact Details Text ?*/
 .footerSection>#footerContact>h6 {
-    font-weight: 100;
+    /** Appearance **/
     font-family: Chakra Petch;
-    letter-spacing: 0.5px;
+    font-weight: 100;
     font-style: italic;
+    letter-spacing: 0.5px;
 }
 
+/*? Footer - Social Links Area ?*/
 .footerSection>#footerLinksBox {
+    /** Positioning **/
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/*? Footer - Social Link ?*/
 .footerSection>#footerLinksBox>.footerLinks {
+    /** Positioning **/
     margin: 0px 3px;
-    text-decoration: none;
+    /** Appearance **/
     color: rgb(255, 255, 255, 0.25);
     font-size: 30px;
+    text-decoration: none;
+    /** Animation **/
     transition: color 0.5s ease;
 }
+
 .footerSection>#footerLinksBox>.footerLinks:hover {
+    /** Appearance **/
     color: rgb(255, 255, 255, 1);
 }
 
-.ball {
-    position: absolute;
-    border-radius: 100%;
-    opacity: 100%;
-    z-index: -1;
-    background-color: #8094c261;
-    margin: 0px;
-}
+/*! Media Queries - Responsiveness !*/
+/*? Desktop Queries - Browser Size ?*/
 @media only screen and (max-width: 1800px) {
+
+    /** Projects - Font Size Adjustment **/
     #projectSection>.card>.text>h5 {
-        font-size:20px;
+        font-size: 20px;
     }
+
     #projectSection>.card>.text>.desc {
-        font-size:11px;
+        font-size: 11px;
     }
+
     #projectSection>.card>.text>.details {
-        font-size:13px;
+        font-size: 13px;
     }
 }
 
 @media only screen and (max-width:1500px) {
+
+    /** About - Font Size Adjustment **/
     .about .text h2 {
         font-size: 1.8em;
     }
+
     .about .text {
         font-size: 0.9em
     }
-    .skillTxt > h6{
+
+    /** Skills - Font Size Adjustment **/
+    .skillTxt>h6 {
         font-size: 15px;
     }
+
     .skillTxt>p {
-        font-size:10px;
+        font-size: 10px;
     }
+
     #sqlTxt>h6 {
-        font-size:12px;
+        font-size: 12px;
     }
+
     #sqlTxt>p {
-        font-size:9px;
+        font-size: 9px;
     }
 }
+
 @media only screen and (max-width:1300px) {
+
+    /** Projects - Font Size Adjustment **/
     #projectSection>.card>.text>h5 {
-        font-size:17px;
+        font-size: 17px;
     }
+
     #projectSection>.card>.text>.desc {
-        font-size:10px;
+        font-size: 10px;
     }
+
     #projectSection>.card>.text>.details {
-        font-size:13px;
+        font-size: 13px;
     }
 }
+
 @media only screen and (max-width:1250px) {
+
+    /** About - Grid direction changed to rows picture shows below text **/
     .about {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
     }
-    .skillTxt > h6{
+
+    /** Skills - Font Size Adjustment **/
+    .skillTxt>h6 {
         font-size: 13px;
     }
+
     .skillTxt>p {
-        font-size:9px;
+        font-size: 9px;
     }
+
     #sqlTxt>h6 {
-        font-size:10px;
+        font-size: 10px;
     }
+
     #sqlTxt>p {
-        font-size:8px;
-    }
-}
-@media only screen and (max-width:1100px){
-    #projectSection>.card>.text>.desc {
-        font-size:9px;
-    }
-    #projectSection>.card>.text>.details {
-        font-size:11px;
+        font-size: 8px;
     }
 }
 
+@media only screen and (max-width:1100px) {
+
+    /** Projects - Font Size Adjustment **/
+    #projectSection>.card>.text>.desc {
+        font-size: 9px;
+    }
+
+    #projectSection>.card>.text>.details {
+        font-size: 11px;
+    }
+}
+
+/*? Tablet Queries ?*/
 @media only screen and (max-width: 900px) {
-    .banner > nav > #headerLink > ul {
+
+    /** Navbar - Font Size Adjustment | Removed margin on sides | Disable logo **/
+    .banner>nav>#headerLink>ul {
         margin: 0px 0px;
-        font-size:15px;
+        font-size: 15px;
     }
+
     .banner .logo img {
-        display:none;
+        display: none;
     }
-    .contactSection > #contactHello{
-        margin-right:50px;
+
+    /** Contact - Shortened Margin Between Txt/Btn **/
+    .contactSection>#contactHello {
+        margin-right: 50px;
     }
 }
 
 @media only screen and (max-width: 700px) {
-    .banner > nav > #headerLink > ul > li {
+
+    /** Navbar - Lowered Padding on Links **/
+    .banner>nav>#headerLink>ul>li {
         padding: 20px 10px;
     }
+
+    /** About - Font Size Adjusted **/
     .about .text {
-        font-size:12px;
+        font-size: 12px;
     }
 }
 
+/*? Phone Queries ?*/
 @media only screen and (max-width: 500px) {
-    .banner > nav > #headerLink > ul {
-        font-size:10px;
+
+    /** Navbar - Font Size Adjusted **/
+    .banner>nav>#headerLink>ul {
+        font-size: 10px;
     }
 }
-
