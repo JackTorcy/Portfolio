@@ -7,7 +7,6 @@
 /* Card colours: #286d5d */
 /* Word Colours: white */
 /* Skills BG colours: rgba(10, 55, 65) */
-
 html {
     zoom: 125%;
     scroll-behavior: smooth;
@@ -31,6 +30,7 @@ body {
 
 /* NAVBAR */
 .banner {
+    width: 100%;
     z-index: 2;
     position: sticky;
     top: 0px;
@@ -108,7 +108,6 @@ body {
     display: flex;
     align-items: start;
     justify-content: center;
-
 }
 
 .headerTxt {
@@ -138,24 +137,27 @@ body {
     letter-spacing: 2px;
     font-family: Chakra Petch;
     animation: fade-in-bottom 1.5s ease-out 1s both;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
-.headerTxt>.headingIcons{
-    display:flex;
+
+.headerTxt>.headingIcons {
+    display: flex;
     justify-self: center;
     justify-content: center;
 }
-.headerTxt>.headingIcons>.iconLinks{
+
+.headerTxt>.headingIcons>.iconLinks {
     animation: fade-in-bottom 1.5s 1.75s ease-out both;
     margin: 0px 5px;
-    height:60px;
-    width:60px;
+    height: 60px;
+    width: 60px;
     text-decoration: none;
     color: rgb(255, 255, 255, 0.25);
     font-size: 50px;
-    transition: color 0.5s ease ;
+    transition: color 0.5s ease;
 }
-.headerTxt>.headingIcons>.iconLinks:hover{
+
+.headerTxt>.headingIcons>.iconLinks:hover {
     color: white;
 }
 
@@ -163,7 +165,7 @@ body {
 #aboutSection {
     margin-top: 180px;
     margin-bottom: 150px;
-    height: 400px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,13 +207,14 @@ body {
 }
 
 .about .text {
+    height:100%;
     padding: 25px;
     font-weight: 200;
     align-self: center;
 }
 
 .about .text h2 {
-    padding-bottom: 10px;
+    padding: 10px 0px;
     font-size: 2.2em;
     font-family: Chakra Petch;
     font-weight: 500;
@@ -224,6 +227,7 @@ body {
 }
 
 .about>.portrait {
+    margin-bottom: 20px;
     justify-self: center;
     align-self: center;
     height: 200px;
@@ -549,6 +553,7 @@ body {
     font-style: italic;
     font-weight: 400;
     font-family: Chakra Petch;
+    font-size:15px;
 }
 
 #projectSection>.card>.text>.desc {
@@ -561,7 +566,7 @@ body {
 .contactSection {
     height: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     letter-spacing: 1.5px;
 }
@@ -569,14 +574,11 @@ body {
 .contactSection>#contactHello {
     font-size: 2.5rem;
     font-family: Chakra Petch;
-    margin-left: 425px;
+    margin-right: 250px;
     font-weight: 300;
-    
-
 }
 
 .contactSection>#contactEmail {
-    margin-right: 425px;
     border-radius: 15px;
     height: 40px;
     width: 120px;
@@ -604,7 +606,7 @@ body {
 
 /*? FOOTER */
 .footerSection {
-    display:flex;
+    display: flex;
     justify-content: space-around;
     margin-top: 100px;
     margin-bottom: 25px;
@@ -612,31 +614,37 @@ body {
     /* background-color: black; */
     bottom: 0px;
 }
-.footerSection>#footerContact{
-    display:flex;
+
+.footerSection>#footerContact {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 50px;
     font-size: 25px;
 }
-.footerSection>#footerContact>h6{
+
+.footerSection>#footerContact>h6 {
     font-weight: 100;
     font-family: Chakra Petch;
     letter-spacing: 0.5px;
     font-style: italic;
 }
 
-.footerSection>#footerLinksBox{
-    display:flex;
+.footerSection>#footerLinksBox {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-.footerSection>#footerLinksBox>.footerLinks{
+
+.footerSection>#footerLinksBox>.footerLinks {
     margin: 0px 3px;
     text-decoration: none;
     color: rgb(255, 255, 255, 0.25);
     font-size: 30px;
-    transition: color 0.5s ease ;
+    transition: color 0.5s ease;
+}
+.footerSection>#footerLinksBox>.footerLinks:hover {
+    color: rgb(255, 255, 255, 1);
 }
 
 .ball {
@@ -647,3 +655,101 @@ body {
     background-color: #8094c261;
     margin: 0px;
 }
+@media only screen and (max-width: 1800px) {
+    #projectSection>.card>.text>h5 {
+        font-size:20px;
+    }
+    #projectSection>.card>.text>.desc {
+        font-size:11px;
+    }
+    #projectSection>.card>.text>.details {
+        font-size:13px;
+    }
+}
+
+@media only screen and (max-width:1500px) {
+    .about .text h2 {
+        font-size: 1.8em;
+    }
+    .about .text {
+        font-size: 0.9em
+    }
+    .skillTxt > h6{
+        font-size: 15px;
+    }
+    .skillTxt>p {
+        font-size:10px;
+    }
+    #sqlTxt>h6 {
+        font-size:12px;
+    }
+    #sqlTxt>p {
+        font-size:9px;
+    }
+}
+@media only screen and (max-width:1300px) {
+    #projectSection>.card>.text>h5 {
+        font-size:17px;
+    }
+    #projectSection>.card>.text>.desc {
+        font-size:10px;
+    }
+    #projectSection>.card>.text>.details {
+        font-size:13px;
+    }
+}
+@media only screen and (max-width:1250px) {
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .skillTxt > h6{
+        font-size: 13px;
+    }
+    .skillTxt>p {
+        font-size:9px;
+    }
+    #sqlTxt>h6 {
+        font-size:10px;
+    }
+    #sqlTxt>p {
+        font-size:8px;
+    }
+}
+@media only screen and (max-width:1100px){
+    #projectSection>.card>.text>.desc {
+        font-size:9px;
+    }
+    #projectSection>.card>.text>.details {
+        font-size:11px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .banner > nav > #headerLink > ul {
+        margin: 0px 0px;
+        font-size:15px;
+    }
+    .banner .logo img {
+        display:none;
+    }
+    .contactSection > #contactHello{
+        margin-right:50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .banner > nav > #headerLink > ul > li {
+        padding: 20px 10px;
+    }
+    .about .text {
+        font-size:12px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .banner > nav > #headerLink > ul {
+        font-size:10px;
+    }
+}
+
