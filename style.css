@@ -386,45 +386,37 @@ body {
 }
 
 /*? Projects */
+/* Projects Title section */
 #projectsHeader {
     width: 100%;
     margin-top: 180px;
     margin-bottom: 30px;
     padding-left: 100px;
 }
-
 #projectsTitle {
-    font-family: Chakra;
+    font-family: Chakra; 
     font-weight: 100;
     letter-spacing: 5px;
     font-size: 40px;
     padding-bottom: 10px;
 }
-
 #projectsSubtitle {
     font-family: chakra;
     font-weight: 100;
     letter-spacing: 2px;
     display: block;
 }
-
-.projectsSection {
+/* Project cards */
+#projectSection {
+    display: flex;
     height: 500px;
     width: 100%;
     margin-bottom: 150px;
-}
-
-.projects {
-    display: grid;
-}
-
-.projects .card_container {
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.projects .card_container .card {
+#projectSection > .card {
     text-decoration: none;
     color: white;
     display: grid;
@@ -438,24 +430,27 @@ body {
     font-size: 15px;
 }
 
-.projects .card_container .card h2 {
-    font-size: 25px;
-}
-
-.projects .card_container .card .desc {
-    padding: 0px 15px;
-    font-size: 13px;
-}
-
-.projects .card_container .card .image img {
+#projectSection > .card > .image > img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.projects .card_container .card .text {
+#projectSection > .card > .text {
+    padding: 10px;
     text-align: center;
     border-top: 2px black solid;
+}
+
+#projectSection > .card > .text > h2 {
+    font-family: Chakra;
+    font-weight: 100;
+    font-size: 25px;
+}
+
+#projectSection > .card > .text > .desc {
+    padding: 0px 15px;
+    font-size: 13px;
 }
 
 /* FOOTER */
