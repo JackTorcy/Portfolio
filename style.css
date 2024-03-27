@@ -12,6 +12,7 @@ html {
     /** Page Behavior **/
     zoom: 125%;
     scroll-behavior: smooth;
+    overflow: hidden
 }
 
 body {
